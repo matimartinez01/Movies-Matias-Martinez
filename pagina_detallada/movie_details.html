@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieStack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="/Recursos_Moviestack/Moviestack_favicon.png" type="image/x-icon">
+</head>
+<body class="bg-[#D2CCFF]">
+    <header class="flex justify-between h-20 bg-[#6D38E0] items-center border border-white border-solid border-2 text-white">
+        <img src="/Recursos_Moviestack/Moviestack_logotipo1.png" class="h-24 md:h-48">
+        <nav class="flex mr-1 gap-x-3 md:text-2xl md:gap-x-10 md:mr-10">
+            <a class="text-l p-1 hover:scale-105" href="/Paginas/index.html">HOME</a>
+            <a class="text-l p-1 hover:scale-105 border border-white border-solid border-1 font-bold" href="/Paginas/movies.html">MOVIES</a>
+            <a class="text-l p-1 hover:scale-105" href="">FAVS</a>
+        </nav>
+    </header>
+    
+    <main class="flex w-4/5 m-auto flex-wrap justify-start gap-y-10 lg:justify-evenly lg:items-center lg:h-screen" id="mainFav">
+
+    </main>
+
+
+    <footer class="flex justify-center h-20 bg-[#6D38E0] items-center border border-white border-solid border-2 text-white text-2xl mt-10">
+        <p>MindHub- Cohort N° 53</p>
+    </footer> 
+
+    <script src="/data.js"></script>
+    <script type="module" src="./app2.js"></script>
+</body>
+</html>
