@@ -1,16 +1,16 @@
 export function articuloPelicula(id, foto, nombre, tagline, descripcion){
-    return `
-    <a class="mt-10 w-full md:h-auto lg:w-1/4 lg:hover:scale-105 lg:min-h-[450px] lg:min-w-[350px]" href="/pagina_detallada/movie_details.html?id=${id}">
-    <article class="bg-[#6D38E0] flex flex-col text-white w-full rounded-2xl border-2 border-white md:line-clamp-10 lg:line-clamp-6 lg:w-1/4 lg:hover:shadow-lg lg:hover:shadow-[#6D38E0] lg:hover:scale-105 lg:min-h-[450px] lg:min-w-[350px]">
-       <img src="${foto}" alt="${nombre}" class="p-3 rounded-t-2xl">
-       <h2 class="text-2xl font-bold p-3">${nombre}</h2>
-       <p class="text-xl italic p-3">${tagline}</p>
-       <p class="text-l p-3 font-semibold">${descripcion}</p>
-   </article>
-   </a>
-    `
-}
-
+     return `
+     <a class="mt-10 w-full md:h-auto lg:w-1/5 lg:hover:scale-105 lg:min-h-[450px] lg:min-w-[350px]" href="/pagina_detallada/movie_details.html?id=${id}">
+     <article class="bg-[#6D38E0] flex flex-col text-white w-full rounded-2xl border-2 border-white lg:3/4 lg:hover:shadow-lg lg:hover:shadow-[#6D38E0] lg:hover:scale-105 lg:min-h-[650px] lg:min-w-[350px]">
+        <img src="${foto}" alt="${nombre}" class="p-3 rounded-t-2xl">
+        <h2 class="text-2xl font-bold p-3">${nombre}</h2>
+        <p class="text-xl italic p-3">${tagline}</p>
+        <p class="p-3 font-semibold">${descripcion}</p>
+    </article>
+    </a>
+     `
+ }
+ 
 export function articuloPeliculaVacio(){
      return `
      <a class="mt-10 w-full mb-[250px] lg:hover:scale-105 lg:min-h-[450px] lg:min-w-[350px] lg:mb-0">
