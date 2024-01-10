@@ -31,6 +31,10 @@ $selectGenero.addEventListener("change", e => {
      let $peliculasFiltradasNombre = filtrarNombrePeliculas(peliculas, $nombrePelicula.value)
      let $peliculasFiltradasGenero = filtrarGeneroPeliculas($peliculasFiltradasNombre, $selectGenero.value)
      $stringPeliculasFiltradas = $peliculasFiltradasGenero.map(a => articuloPelicula(a.id, a.image, a.title, a.tagline, a.overview)).join(" ")
+     if ($stringPeliculasFiltradas == ""){
+          $stringPeliculasFiltradas = articuloPeliculaVacio()
+     }
      $divPeliculas.innerHTML = $stringPeliculasFiltradas
 })
+
 

@@ -13,7 +13,7 @@ export function articuloPelicula(id, foto, nombre, tagline, descripcion){
  
 export function articuloPeliculaVacio(){
      return `
-     <a class="mt-10 w-full mb-[250px] lg:hover:scale-105 lg:min-h-[450px] lg:min-w-[350px] lg:mb-0">
+     <a class="mt-10 w-full mb-[250px] md:mb-[400px] lg:hover:scale-105 lg:min-h-[450px] lg:min-w-[350px] lg:mb-0">
      <article class="min-h-[150px] bg-[#6D38E0] flex flex-col text-white w-full rounded-2xl border-2 border-white ]">
        <h1 class="text-3xl font-bold p-3 text-center">There is no match in the search</h1>
      </article>
@@ -27,18 +27,25 @@ export function crearOption(genero){
     `
 }
 
-export function crearSelect(arrayPeliculas, contenedor){
+// export function crearSelect(arrayPeliculas, contenedor){
      
-    let $generos = []
-    let $arrayTodosLosGeneros = arrayPeliculas.map(a => a.genres)
+//     let $generos = []
+//     let $arrayTodosLosGeneros = arrayPeliculas.map(a => a.genres)
     
-    for (let a of $arrayTodosLosGeneros){
-         for (let genero of a){
-              if($generos.indexOf(genero) == -1)
-              $generos.push(genero)
-    }
-}
-return contenedor.innerHTML += $generos.map(a => crearOption(a))
+//     for (let a of $arrayTodosLosGeneros){
+//          for (let genero of a){
+//               if($generos.indexOf(genero) == -1)
+//               $generos.push(genero)
+//     }
+//     console.log($generos)
+// }
+// return contenedor.innerHTML += $generos.map(a => crearOption(a))
+// }
+
+export function crearSelect(arrayPeliculas, contenedor){
+     let $generos = arrayPeliculas.map(a => a.genres)
+     let $arrayTodosLosGeneros = [... new Set ($generos.flat())]
+     return contenedor.innerHTML += $arrayTodosLosGeneros.map(a => crearOption(a))
 }
 
 export function filtrarNombrePeliculas(arrayPeliculas, tituloDePelicula){

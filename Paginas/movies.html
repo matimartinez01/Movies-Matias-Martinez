@@ -17,10 +17,8 @@
         </nav>
     </header>
 
-    <main class="flex w-4/5 m-auto flex-wrap justify-center">
-        <div class="flex bg-[#6D38E0] justify-center w-full mt-6 h-36 items-center m-auto w-full">
-            <h1 class="text-5xl font-bold text-white">MOVIES</h1>
-        </div>
+    <main class="flex w-4/5 m-auto flex-wrap justify-center md:w-full">
+        <img src="/Recursos_Moviestack/bannerMovies.jpg" alt="BANNER" class="h-64 border mt-10 w-full bg-zinc-400 object-cover md:mt-0 lg:h-[650px] lg:w-full lg:object-fill">
         <div class="flex justify-center w-full items-start mt-6">
             <form class="flex justify-center items-start gap-y-3 gap-x-3">
                 <input type="text" id="nombrePelicula" placeholder="Name..." class="border border-2 border-[#6D38E0] p-1">
@@ -29,7 +27,7 @@
                 </select>
             </form>
         </div>
-        <div class="flex flex-col gap-x-10 items-center md:flex-row md:flex-wrap md:justify-center" id="divPeliculas">
+        <div class=" flex flex-col gap-x-10 items-center md:flex-row md:flex-wrap md:justify-center md:w-4/5" id="divPeliculas">
             
         </div>
     </main>
@@ -41,3 +39,8 @@
     <script type="module" src="/Paginas/app.js"></script>
 </body>
 </html>
+
+
+<!-- <div class="flex bg-[#6D38E0] justify-center w-full mt-6 h-36 items-center m-auto w-full">
+    <h1 class="text-5xl font-bold text-white">MOVIES</h1>
+</div> -->
