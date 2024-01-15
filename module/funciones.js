@@ -10,7 +10,7 @@ export function articuloPelicula(pelicula){
     </article>
     <div class="flex justify-between ml-4 mr-4 items-center mt-3 lg:grow">
           <label class="flex items-center text-xl font-bold gap-x-2 text-[#6D38E0]">
-          <button class="border-2 border-[#6D38E0] w-8 h-8 ${aux} hola rounded-full" data-id="${pelicula.id}"></button>FAVS</label>
+          <button class="border-2 border-[#6D38E0] w-8 h-8 ${aux} boton_fav rounded-full" data-id="${pelicula.id}"></button>FAVS</label>
           <a href="/pagina_detallada/movie_details.html?id=${pelicula.id}" class="lg:hover:shadow-lg lg:hover:shadow-[#6D38E0] lg:hover:scale-105 rounded-xl flex items-center bg-[#6D38E0] text-white w-30 h-8 p-2 text-center font-bold">More Info</a>
      </div>
     </div>

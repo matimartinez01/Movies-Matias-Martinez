@@ -54,8 +54,8 @@ then(a => {
      // Le hago un toggle de bg al boton
      // Capturo todos los botones de los articulos con el parametro ingresado
      function funcionamientoBoton(botonid){
-          const $botonardo = document.querySelectorAll(`.${botonid}`)
-          for (let a of $botonardo){
+          const $boton = document.querySelectorAll(`.${botonid}`)
+          for (let a of $boton){
                a.addEventListener("click", (e) => {
                     let dataset = e.target.dataset
                     let peliculaDelBoton = peliculasAPI.find(a => a.id == dataset.id)
@@ -71,7 +71,7 @@ then(a => {
                     localStorage.setItem('peliculasFavs', JSON.stringify(peliculasFavs))
                })}
      }
-     funcionamientoBoton("hola")
+     funcionamientoBoton("boton_fav")
     
 
      //Paso 6 - Filtro por nombre la pelicula con el array peliculasAPI que tiene el valor activado en true o false
@@ -84,7 +84,7 @@ then(a => {
                stringPeliculasFiltradas = articuloPeliculaVacio()
           }
           $divPeliculas.innerHTML = stringPeliculasFiltradas
-          funcionamientoBoton("hola")
+          funcionamientoBoton("boton_fav")
      })
      $selectGenero.addEventListener("change", e => {
           let peliculasFiltradasNombre = filtrarNombrePeliculas(peliculasAPI, $nombrePelicula.value)
@@ -94,6 +94,6 @@ then(a => {
                stringPeliculasFiltradas = articuloPeliculaVacio()
           }
           $divPeliculas.innerHTML = stringPeliculasFiltradas
-          funcionamientoBoton("hola")
+          funcionamientoBoton("boton_fav")
      })
 })

@@ -20,8 +20,8 @@ if (peliculasFavs.length == 0){
 
 
 function funcionamientoBoton(botonid){
-    const $botonardo = document.querySelectorAll(`.${botonid}`)
-    for (let a of $botonardo){
+    const $boton = document.querySelectorAll(`.${botonid}`)
+    for (let a of $boton){
          a.addEventListener("click", (e) => {
               let dataset = e.target.dataset
               let peliculaDelBoton = peliculasFavs2.find(a => a.id == dataset.id)
@@ -55,5 +55,5 @@ function funcionamientoBoton(botonid){
          })}
 }
 
-funcionamientoBoton("hola")
+funcionamientoBoton("boton_fav")
 
