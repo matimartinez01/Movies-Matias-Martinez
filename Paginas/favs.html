@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieStack - Favs</title>
+    <title>MovieStack - Movies</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="shortcut icon" href="/Recursos_Moviestack/Moviestack_favicon.png" type="image/x-icon">
 </head>
-<body class="bg-zinc-700">
-    <header class="flex justify-between h-20 bg-zinc-600 items-center border border-white border-solid border-2 text-white">
+<body class="bg-[#D2CCFF]">
+    <header class="flex justify-between h-20 bg-[#6D38E0] items-center border border-white border-solid border-2 text-white">
         <img src="/Recursos_Moviestack/Moviestack_logotipo1.png" class="h-24 md:h-48">
         <nav class="flex mr-1 gap-x-3 md:text-2xl md:gap-x-10 md:mr-10">
             <a class="text-l p-1 hover:scale-105" href="./index.html">HOME</a>
@@ -16,9 +17,17 @@
             <a class="text-l border border-white border-solid border-1 font-bold p-1 hover:scale-105" href="#">FAVS</a>
         </nav>
     </header>
-    
-    <footer class="flex justify-center h-20 bg-zinc-600 items-center border border-white border-solid border-2 text-white text-2xl mt-10">
-        <p>MindHub- Cohort N° 53</p>
-    </footer> 
+
+    <main class="flex w-4/5 m-auto flex-wrap justify-center md:w-full">
+        <img src="/Recursos_Moviestack/bannerFavs.jpg" alt="BANNER" class="h-64 border mt-10 w-full bg-zinc-400 object-cover md:mt-0 lg:h-[650px] lg:w-full lg:object-cover">
+        <div class=" flex flex-col gap-x-10 items-center md:flex-row md:flex-wrap md:justify-center md:w-4/5" id="divPeliculas">
+            
+        </div>
+    </main>
+
+    <footer class="flex justify-center h-20 bg-[#6D38E0] items-center border border-white border-solid border-2 text-white text-2xl mt-14">
+        <p>Matias Martinez - MindHub - Cohort N° 53</p>
+    </footer>
+    <script type="module" src="/Paginas/appFavs.js"></script>
 </body>
 </html>
