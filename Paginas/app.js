@@ -11,7 +11,7 @@ import {articuloPeliculaVacio} from "/module/funciones.js"
 
 
 crearSelect(peliculas, $selectGenero)
- 
+
 
 let $stringPeliculas = peliculas.map(a => articuloPelicula(a.id, a.image, a.title, a.tagline, a.overview)).join(" ")
 $divPeliculas.innerHTML = $stringPeliculas

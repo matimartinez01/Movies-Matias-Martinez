@@ -45,7 +45,18 @@ export function crearOption(genero){
 export function crearSelect(arrayPeliculas, contenedor){
      let $generos = arrayPeliculas.map(a => a.genres)
      let $arrayTodosLosGeneros = [... new Set ($generos.flat())]
-     return contenedor.innerHTML += $arrayTodosLosGeneros.map(a => crearOption(a))
+     let $arrayTodosLosGenerosOrdenados = $arrayTodosLosGeneros.toSorted((a,b) => {
+          if (a > b){
+               return 1
+          }
+          if(a < b){
+               return -1
+          }
+          else{
+               return 0
+          }
+     })
+     contenedor.innerHTML += $arrayTodosLosGenerosOrdenados.map(a => crearOption(a))
 }
 
 export function filtrarNombrePeliculas(arrayPeliculas, tituloDePelicula){
